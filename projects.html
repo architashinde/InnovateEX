@@ -5,58 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects – InnovateEX</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="shared.css" rel="stylesheet">
   <style>
     .project-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 16px;
-      padding: 1.75rem;
+      background: #0d0d0d;
+      border: 1px solid #1a1a1a;
+      border-radius: 10px;
+      padding: 1.5rem 1.6rem;
       display: flex;
       align-items: flex-start;
-      gap: 1.25rem;
-      transition: all 0.25s;
-      margin-bottom: 1rem;
+      gap: 1.1rem;
+      transition: all 0.2s;
+      margin-bottom: 0.75rem;
     }
     .project-card:hover {
-      border-color: rgba(124,58,237,0.4);
-      background: rgba(124,58,237,0.06);
-      transform: translateX(6px);
+      border-color: rgba(249,115,22,0.3);
+      background: rgba(249,115,22,0.04);
+      transform: translateX(5px);
     }
     .proj-num {
-      width: 40px; height: 40px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, rgba(124,58,237,0.25), rgba(6,182,212,0.15));
-      border: 1px solid rgba(124,58,237,0.3);
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: #111;
+      border: 1px solid #222;
       display: flex; align-items: center; justify-content: center;
       font-weight: 800;
-      font-size: 0.82rem;
-      color: #a78bfa;
+      font-size: 0.75rem;
+      color: #555;
       flex-shrink: 0;
+      font-family: 'Syne', sans-serif;
     }
-    .proj-info h5 { color: #fff; font-weight: 700; font-size: 1rem; margin-bottom: 0.25rem; }
-    .proj-info p  { color: rgba(255,255,255,0.4); font-size: 0.83rem; margin: 0; }
+    .proj-info h5 { color: #fff; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.3rem; }
+    .proj-info p  { color: #555; font-size: 0.82rem; margin: 0; line-height: 1.55; }
     .proj-badge {
       display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 600;
+      font-size: 0.68rem;
+      font-weight: 700;
       padding: 0.15rem 0.6rem;
-      border-radius: 50px;
+      border-radius: 4px;
       letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
-    .badge-photon { background: rgba(124,58,237,0.2); color: #a78bfa; }
-    .badge-lifi   { background: rgba(245,158,11,0.2); color: #fbbf24; }
-    .badge-iot    { background: rgba(34,197,94,0.2);  color: #4ade80; }
-    .badge-wdm    { background: rgba(6,182,212,0.2);  color: #22d3ee; }
+    .badge-photon { background: rgba(59,130,246,0.12);  color: #60a5fa; }
+    .badge-lifi   { background: rgba(234,179,8,0.12);   color: #facc15; }
+    .badge-iot    { background: rgba(34,197,94,0.12);   color: #4ade80; }
+    .badge-wdm    { background: rgba(249,115,22,0.12);  color: #f97316; }
+
+    .sidebar-box {
+      background: #0d0d0d;
+      border: 1px solid #1a1a1a;
+      border-radius: 10px;
+      padding: 1.6rem;
+    }
+    .sidebar-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid #111;
+    }
+    .sidebar-row:last-of-type { border-bottom: none; }
+    .sidebar-row span:first-child { color: #555; font-size: 0.82rem; }
+    .sidebar-row span:last-child  { color: #fff; font-weight: 700; font-size: 1rem; font-family: 'Syne', sans-serif; }
   </style>
 </head>
-<body style="background:#07060f; margin:0;">
+<body>
 
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="index.html">&#9889; Tech &amp; Innovation Hub</a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" style="color:rgba(255,255,255,0.6);">
+      <a class="navbar-brand" href="index.html">InnovateEX</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navMenu">
@@ -72,7 +91,7 @@
 
   <div class="page-hero">
     <div class="container position-relative" style="z-index:1;">
-      <div class="page-hero-tag">&#10022; Student Work</div>
+      <div class="page-hero-tag">Student Work</div>
       <h1>Student Projects</h1>
       <p>Real-world experiments and live demos built by our students exploring optical comms, AI, and IoT.</p>
     </div>
@@ -80,7 +99,7 @@
 
   <section class="section section-dark">
     <div class="container">
-      <div class="row">
+      <div class="row g-4">
         <div class="col-lg-8">
 
           <div class="project-card">
@@ -120,27 +139,17 @@
           </div>
 
         </div>
-        <div class="col-lg-4 mt-4 mt-lg-0">
-          <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:1.75rem;">
-            <div class="section-tag mb-2">&#10022; Summary</div>
-            <h5 style="color:#fff; font-weight:700; margin-bottom:1.25rem;">Project Stats</h5>
-            <div style="display:flex; flex-direction:column; gap:1rem;">
-              <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.75rem; border-bottom:1px solid rgba(255,255,255,0.06);">
-                <span style="color:rgba(255,255,255,0.5); font-size:0.85rem;">Total Projects</span>
-                <span style="color:#fff; font-weight:700; font-size:1.1rem;">4</span>
-              </div>
-              <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.75rem; border-bottom:1px solid rgba(255,255,255,0.06);">
-                <span style="color:rgba(255,255,255,0.5); font-size:0.85rem;">Tech Domains</span>
-                <span style="color:#fff; font-weight:700; font-size:1.1rem;">3</span>
-              </div>
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <span style="color:rgba(255,255,255,0.5); font-size:0.85rem;">Cohort Year</span>
-                <span style="color:#fff; font-weight:700; font-size:1.1rem;">2026</span>
-              </div>
-            </div>
-            <div style="margin-top:1.75rem;">
-              <a href="contact.html" style="display:block; text-align:center; background:linear-gradient(135deg,#7c3aed,#06b6d4); color:#fff; font-weight:600; font-size:0.88rem; padding:0.7rem 1rem; border-radius:50px; text-decoration:none; transition:opacity 0.2s;">
-                Submit Your Project &#8594;
+
+        <div class="col-lg-4">
+          <div class="sidebar-box">
+            <div class="section-tag mb-2">Summary</div>
+            <h5 style="color:#fff; font-weight:700; font-family:'Syne',sans-serif; margin-bottom:1.25rem; font-size:1.05rem;">Project Stats</h5>
+            <div class="sidebar-row"><span>Total Projects</span><span>4</span></div>
+            <div class="sidebar-row"><span>Tech Domains</span><span>3</span></div>
+            <div class="sidebar-row"><span>Cohort Year</span><span>2026</span></div>
+            <div style="margin-top:1.5rem;">
+              <a href="contact.html" class="btn-primary-grad" style="display:block; text-align:center; font-size:0.85rem; padding:0.7rem 1rem;">
+                Submit Your Project →
               </a>
             </div>
           </div>
@@ -149,9 +158,7 @@
     </div>
   </section>
 
-  <footer>
-    &copy; 2026 <span>InnovateEX</span> &mdash; Built with curiosity &amp; code.
-  </footer>
+  <footer>© 2026 <span>InnovateEX</span> — Built with curiosity &amp; code.</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
