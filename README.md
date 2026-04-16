@@ -6,10 +6,6 @@ InnovateEX is a simple and clean web platform designed to showcase innovative id
 
 https://innovateex.rf.gd
 
-## 📸 Preview
-
-![Website Preview](<img width="1892" height="918" alt="Screenshot 2026-04-17 002822" src="https://github.com/user-attachments/assets/e8fc8359-3d50-4b1b-8606-5a4b72576fd3" />)
-
 ## 🛠️ Tech Stack
 
 * HTML
