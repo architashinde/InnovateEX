@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InnovateEX</title>
+  <title>InnovateEX — Exploring Tomorrow's Technology</title>
+  <meta name="description" content="InnovateEX showcases student innovations in optical networks, AI, Li-Fi, IoT, and quantum computing. Explore live projects and research from our 2026 cohort.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="shared.css" rel="stylesheet">
@@ -65,10 +66,7 @@
       letter-spacing: -2px;
       margin-bottom: 1.25rem;
     }
-    .hero h1 em {
-      font-style: normal;
-      color: #f97316;
-    }
+    .hero h1 em { font-style: normal; color: #f97316; }
     .hero p {
       color: #666;
       font-size: 1rem;
@@ -78,86 +76,58 @@
     }
     .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .btn-hero {
-      background: #fff;
-      color: #000;
-      font-weight: 700;
-      font-size: 0.9rem;
-      padding: 0.8rem 1.9rem;
-      border-radius: 6px;
-      border: none;
-      text-decoration: none;
-      display: inline-block;
-      transition: opacity 0.15s, transform 0.15s;
-      letter-spacing: -0.1px;
+      background: #fff; color: #000; font-weight: 700; font-size: 0.9rem;
+      padding: 0.8rem 1.9rem; border-radius: 6px; border: none;
+      text-decoration: none; display: inline-block;
+      transition: opacity 0.15s, transform 0.15s; letter-spacing: -0.1px;
     }
     .btn-hero:hover { opacity: 0.88; transform: translateY(-1px); color: #000; }
     .btn-hero-outline {
-      background: transparent;
-      color: #888;
-      font-weight: 600;
-      font-size: 0.9rem;
-      padding: 0.8rem 1.9rem;
-      border-radius: 6px;
-      border: 1px solid #222;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.15s;
+      background: transparent; color: #888; font-weight: 600; font-size: 0.9rem;
+      padding: 0.8rem 1.9rem; border-radius: 6px; border: 1px solid #222;
+      text-decoration: none; display: inline-block; transition: all 0.15s;
     }
     .btn-hero-outline:hover { color: #fff; border-color: #555; }
 
-    /* ── Innovation Cards ── */
-    .inno-card { cursor: default; }
+    /* ── Live Clock ── */
+    .live-clock {
+      margin-top: 2.5rem;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.75rem;
+      color: #333;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .live-clock span { color: #f97316; font-weight: 700; }
 
     /* ── Project Chips ── */
     .project-chip {
-      background: #0d0d0d;
-      border: 1px solid #1a1a1a;
-      border-radius: 8px;
-      padding: 0.9rem 1.1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-      transition: all 0.15s;
-      margin-bottom: 0.6rem;
-      text-decoration: none;
+      background: #0d0d0d; border: 1px solid #1a1a1a; border-radius: 8px;
+      padding: 0.9rem 1.1rem; display: flex; align-items: center; gap: 0.85rem;
+      transition: all 0.15s; margin-bottom: 0.6rem; text-decoration: none;
     }
     .project-chip:hover {
       border-color: rgba(249,115,22,0.3);
       background: rgba(249,115,22,0.05);
       transform: translateX(5px);
     }
-    .chip-dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: #f97316;
-      flex-shrink: 0;
-    }
+    .chip-dot { width: 6px; height: 6px; border-radius: 50%; background: #f97316; flex-shrink: 0; }
     .chip-text { color: #aaa; font-size: 0.875rem; font-weight: 500; }
+    .chip-arrow { margin-left: auto; color: #333; font-size: 0.75rem; transition: color 0.15s; }
+    .project-chip:hover .chip-arrow { color: #f97316; }
 
     /* ── CTA Banner ── */
     .cta-banner {
-      background: #0d0d0d;
-      border: 1px solid #1a1a1a;
-      border-radius: 12px;
-      padding: 3.5rem 2rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+      background: #0d0d0d; border: 1px solid #1a1a1a; border-radius: 12px;
+      padding: 3.5rem 2rem; text-align: center; position: relative; overflow: hidden;
     }
     .cta-banner::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
       background: linear-gradient(90deg, transparent, #f97316, transparent);
     }
     .cta-banner h2 {
-      font-family: 'Syne', sans-serif;
-      color: #fff;
-      font-weight: 800;
-      font-size: 1.8rem;
-      letter-spacing: -0.5px;
-      margin-bottom: 0.75rem;
+      font-family: 'Syne', sans-serif; color: #fff; font-weight: 800;
+      font-size: 1.8rem; letter-spacing: -0.5px; margin-bottom: 0.75rem;
     }
     .cta-banner p { color: #555; margin-bottom: 2rem; font-size: 0.9rem; }
   </style>
@@ -165,7 +135,7 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg" id="mainNav">
     <div class="container">
       <a class="navbar-brand" href="index.html">InnovateEX</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -193,6 +163,10 @@
         <a href="innovations.html" class="btn-hero">Discover Innovations</a>
         <a href="projects.html" class="btn-hero-outline">View Projects →</a>
       </div>
+      <!-- Live Clock -->
+      <div class="live-clock">
+        <span id="liveClock">--:--:--</span> &nbsp;·&nbsp; Mumbai, India
+      </div>
     </div>
   </section>
 
@@ -211,7 +185,7 @@
   <!-- Innovations Preview -->
   <section class="section section-dark">
     <div class="container">
-      <div class="row align-items-center mb-4">
+      <div class="row align-items-center mb-4 reveal">
         <div class="col-md-7">
           <div class="section-tag">What we explore</div>
           <h2 class="section-title">Latest Innovations</h2>
@@ -222,41 +196,11 @@
         </div>
       </div>
       <div class="row g-3">
-        <div class="col-md-4">
-          <div class="inno-card">
-            <div class="inno-icon icon-blue">🌐</div>
-            <h5>Optical Networks</h5>
-            <p>High-speed data transmission using light pulses through fibre optic cables.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="inno-card">
-            <div class="inno-icon icon-orange">🤖</div>
-            <h5>Artificial Intelligence</h5>
-            <p>Smart systems and ML models transforming industries from healthcare to logistics.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="inno-card">
-            <div class="inno-icon icon-yellow">💡</div>
-            <h5>Li-Fi Technology</h5>
-            <p>Wireless communication using visible light — faster and more secure than Wi-Fi.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="inno-card">
-            <div class="inno-icon icon-purple">⚛️</div>
-            <h5>Quantum Computing</h5>
-            <p>Harnessing quantum mechanics to solve problems beyond classical computers — from cryptography to drug discovery.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="inno-card">
-            <div class="inno-icon icon-teal">🔗</div>
-            <h5>Blockchain</h5>
-            <p>Decentralized ledger technology enabling secure, transparent transactions without intermediaries.</p>
-          </div>
-        </div>
+        <div class="col-md-4 reveal"><div class="inno-card"><div class="inno-icon icon-blue">🌐</div><h5>Optical Networks</h5><p>High-speed data transmission using light pulses through fibre optic cables.</p></div></div>
+        <div class="col-md-4 reveal"><div class="inno-card"><div class="inno-icon icon-orange">🤖</div><h5>Artificial Intelligence</h5><p>Smart systems and ML models transforming industries from healthcare to logistics.</p></div></div>
+        <div class="col-md-4 reveal"><div class="inno-card"><div class="inno-icon icon-yellow">💡</div><h5>Li-Fi Technology</h5><p>Wireless communication using visible light — faster and more secure than Wi-Fi.</p></div></div>
+        <div class="col-md-4 reveal"><div class="inno-card"><div class="inno-icon icon-purple">⚛️</div><h5>Quantum Computing</h5><p>Harnessing quantum mechanics to solve problems beyond classical computers.</p></div></div>
+        <div class="col-md-4 reveal"><div class="inno-card"><div class="inno-icon icon-teal">🔗</div><h5>Blockchain</h5><p>Decentralized ledger technology enabling secure, transparent transactions.</p></div></div>
       </div>
     </div>
   </section>
@@ -265,17 +209,33 @@
   <section class="section section-mid">
     <div class="container">
       <div class="row align-items-start">
-        <div class="col-lg-5 mb-4 mb-lg-0">
+        <div class="col-lg-5 mb-4 mb-lg-0 reveal">
           <div class="section-tag">Student work</div>
           <h2 class="section-title">Featured Projects</h2>
           <p class="section-sub mb-4">Real experiments and demos built by students at the Innovation Hub.</p>
           <a href="projects.html" class="btn-primary-grad" style="font-size:0.82rem; padding:0.6rem 1.4rem;">All Projects →</a>
         </div>
-        <div class="col-lg-7">
-          <a class="project-chip" href="projects.html"><div class="chip-dot"></div><span class="chip-text">Propagation Loss Analysis in Optical Fiber</span></a>
-          <a class="project-chip" href="projects.html"><div class="chip-dot"></div><span class="chip-text">WDM Multiplexing &amp; BER Measurement</span></a>
-          <a class="project-chip" href="projects.html"><div class="chip-dot"></div><span class="chip-text">Li-Fi Data Transmission Demo</span></a>
-          <a class="project-chip" href="projects.html"><div class="chip-dot"></div><span class="chip-text">Smart IoT Home Automation</span></a>
+        <div class="col-lg-7 reveal">
+          <a class="project-chip" href="project-optical.html">
+            <div class="chip-dot"></div>
+            <span class="chip-text">Propagation Loss Analysis in Optical Fiber</span>
+            <span class="chip-arrow">→</span>
+          </a>
+          <a class="project-chip" href="project-wdm.html">
+            <div class="chip-dot"></div>
+            <span class="chip-text">WDM Multiplexing &amp; BER Measurement</span>
+            <span class="chip-arrow">→</span>
+          </a>
+          <a class="project-chip" href="project-lifi.html">
+            <div class="chip-dot"></div>
+            <span class="chip-text">Li-Fi Data Transmission Demo</span>
+            <span class="chip-arrow">→</span>
+          </a>
+          <a class="project-chip" href="project-iot.html">
+            <div class="chip-dot"></div>
+            <span class="chip-text">Smart IoT Home Automation</span>
+            <span class="chip-arrow">→</span>
+          </a>
         </div>
       </div>
     </div>
@@ -283,7 +243,7 @@
 
   <!-- CTA -->
   <section class="section section-dark">
-    <div class="container">
+    <div class="container reveal">
       <div class="cta-banner">
         <h2>Got a question or project idea?</h2>
         <p>Reach out to our team — we'd love to collaborate or hear from you.</p>
@@ -295,5 +255,6 @@
   <footer>© 2026 <span>InnovateEX</span> — Built with curiosity &amp; code.</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="shared.js"></script>
 </body>
 </html>

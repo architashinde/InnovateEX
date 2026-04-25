@@ -4,48 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Innovations – InnovateEX</title>
+  <meta name="description" content="Explore 10 frontier technology areas researched and built by InnovateEX students.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="shared.css" rel="stylesheet">
   <style>
-    .detail-card {
+    .topic-card {
       background: #0d0d0d;
       border: 1px solid #1a1a1a;
       border-radius: 10px;
       padding: 1.75rem;
       height: 100%;
+      display: flex;
+      flex-direction: column;
       transition: border-color 0.2s, background 0.2s, transform 0.2s;
     }
-    .detail-card:hover {
+    .topic-card:hover {
       border-color: rgba(249,115,22,0.3);
       background: rgba(249,115,22,0.04);
       transform: translateY(-4px);
     }
-    .detail-card .tag {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-      padding: 0.2rem 0.65rem;
-      border-radius: 4px;
-      margin-bottom: 0.9rem;
-      background: rgba(249,115,22,0.12);
-      color: #f97316;
+    .topic-icon {
+      width: 44px; height: 44px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 1.1rem;
+      flex-shrink: 0;
     }
-    .detail-card .tag.blue   { background: rgba(59,130,246,0.12); color: #60a5fa; }
-    .detail-card .tag.green  { background: rgba(34,197,94,0.12);  color: #4ade80; }
-    .detail-card .tag.yellow { background: rgba(234,179,8,0.12);  color: #facc15; }
-    .detail-card .tag.purple { background: rgba(168,85,247,0.12); color: #c084fc; }
-    .detail-card .tag.teal   { background: rgba(20,184,166,0.12); color: #2dd4bf; }
-    .detail-card h4 { color: #fff; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.5rem; }
-    .detail-card p  { color: #666; font-size: 0.86rem; line-height: 1.65; margin: 0; }
-    .divider { border-color: #111; margin: 0; }
+    .topic-tag {
+      display: inline-block;
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 1.2px; text-transform: uppercase;
+      padding: 0.2rem 0.65rem; border-radius: 4px;
+      margin-bottom: 0.9rem;
+    }
+    .topic-card h4 { color: #fff; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.5rem; }
+    .topic-card p  { color: #666; font-size: 0.86rem; line-height: 1.65; margin: 0; flex: 1; }
+
+    /* colour variants */
+    .c-blue   { background: rgba(59,130,246,0.12);  color: #60a5fa; }
+    .c-orange { background: rgba(249,115,22,0.12);  color: #f97316; }
+    .c-yellow { background: rgba(234,179,8,0.12);   color: #facc15; }
+    .c-green  { background: rgba(34,197,94,0.12);   color: #4ade80; }
+    .c-purple { background: rgba(168,85,247,0.12);  color: #c084fc; }
+    .c-teal   { background: rgba(20,184,166,0.12);  color: #2dd4bf; }
+    .c-red    { background: rgba(239,68,68,0.12);   color: #f87171; }
+    .c-pink   { background: rgba(236,72,153,0.12);  color: #f472b6; }
+    .c-sky    { background: rgba(14,165,233,0.12);  color: #38bdf8; }
+    .c-lime   { background: rgba(132,204,22,0.12);  color: #a3e635; }
   </style>
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg" id="mainNav">
     <div class="container">
       <a class="navbar-brand" href="index.html">InnovateEX</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -66,112 +78,110 @@
     <div class="container position-relative" style="z-index:1;">
       <div class="page-hero-tag">Technology</div>
       <h1>Latest Innovations</h1>
-      <p>Explore the frontier technologies our team researches, builds, and demos every semester.</p>
+      <p>10 frontier technology areas our team researches, builds, and demos every semester.</p>
     </div>
   </div>
 
-  <!-- All 5 Innovation Cards -->
   <section class="section section-dark">
     <div class="container">
       <div class="row g-3">
-        <div class="col-md-4">
-          <div class="inno-card">
-            <div class="inno-icon icon-blue">🌐</div>
-            <h5>Optical Networks</h5>
-            <p>Ultra-high-speed data transmission using light pulses through silica fibre. We explore WDM, DWDM, and signal propagation theory.</p>
+
+        <div class="col-md-4 col-sm-6 reveal">
+          <div class="topic-card">
+            <div class="topic-icon c-blue">🌐</div>
+            <div class="topic-tag c-blue">Optical Networks</div>
+            <h4>Optical Fiber & WDM</h4>
+            <p>Ultra-high-speed data transmission using light pulses through silica fibre, including WDM and DWDM multiplexing techniques.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="inno-card">
-            <div class="inno-icon icon-orange">🤖</div>
-            <h5>Artificial Intelligence</h5>
+
+        <div class="col-md-4 col-sm-6 reveal">
+          <div class="topic-card">
+            <div class="topic-icon c-orange">🤖</div>
+            <div class="topic-tag c-orange">AI / ML</div>
+            <h4>Artificial Intelligence</h4>
             <p>Machine learning models and neural networks transforming industries from healthcare diagnostics to predictive manufacturing.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="inno-card">
-            <div class="inno-icon icon-yellow">💡</div>
-            <h5>Li-Fi Technology</h5>
-            <p>Wireless communication over visible light spectrum — 100x faster than Wi-Fi, immune to RF interference, inherently secure.</p>
+
+        <div class="col-md-4 col-sm-6 reveal">
+          <div class="topic-card">
+            <div class="topic-icon c-yellow">💡</div>
+            <div class="topic-tag c-yellow">Li-Fi</div>
+            <h4>Li-Fi Technology</h4>
+            <p>Wireless communication over visible light spectrum — 100× faster than Wi-Fi, immune to RF interference, inherently secure.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="inno-card">
-            <div class="inno-icon icon-purple">⚛️</div>
-            <h5>Quantum Computing</h5>
+
+        <div class="col-md-4 col-sm-6 reveal">
+          <div class="topic-card">
+            <div class="topic-icon c-green">🏠</div>
+            <div class="topic-tag c-green">IoT</div>
+            <h4>Smart IoT Systems</h4>
+            <p>ESP32 and Arduino sensor networks using MQTT for real-time monitoring of lighting, temperature, and security.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 reveal">
+          <div class="topic-card">
+            <div class="topic-icon c-purple">⚛️</div>
+            <div class="topic-tag c-purple">Quantum</div>
+            <h4>Quantum Computing</h4>
             <p>Harnessing quantum mechanics to solve problems beyond classical computers — from cryptography to drug discovery.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="inno-card">
-            <div class="inno-icon icon-teal">🔗</div>
-            <h5>Blockchain</h5>
-            <p>Decentralized ledger technology enabling secure, transparent transactions without central intermediaries.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <hr class="divider">
+        <div class="col-md-4 col-sm-6 reveal">
+          <div class="topic-card">
+            <div class="topic-icon c-teal">🔗</div>
+            <div class="topic-tag c-teal">Blockchain</div>
+            <h4>Blockchain & DeFi</h4>
+            <p>Decentralized ledger technology enabling secure, transparent transactions and self-executing smart contracts.</p>
+          </div>
+        </div>
 
-  <!-- Research Highlights -->
-  <section class="section section-mid">
-    <div class="container">
-      <div class="mb-5">
-        <div class="section-tag">Deep dive</div>
-        <h2 class="section-title">Research Highlights</h2>
-        <p class="section-sub">More detail on what makes each innovation area exciting right now.</p>
-      </div>
-      <div class="row g-3">
-        <div class="col-lg-6">
-          <div class="detail-card">
-            <div class="tag blue">Photonics</div>
-            <h4>WDM &amp; Signal Multiplexing</h4>
-            <p>Wavelength Division Multiplexing allows multiple data streams to travel simultaneously on a single fibre, massively boosting throughput without new physical infrastructure.</p>
+        <div class="col-md-4 col-sm-6 reveal">
+          <div class="topic-card">
+            <div class="topic-icon c-sky">☁️</div>
+            <div class="topic-tag c-sky">Cloud</div>
+            <h4>Edge & Cloud Computing</h4>
+            <p>Running inference and processing at the network edge to reduce latency and cloud dependency in real-time systems.</p>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="detail-card">
-            <div class="tag yellow">Wireless</div>
-            <h4>Li-Fi in Indoor Networks</h4>
-            <p>By modulating LED lights faster than the human eye can detect, Li-Fi achieves multi-Gbps links indoors — ideal for hospitals, aircraft, and high-security environments.</p>
+
+        <div class="col-md-4 col-sm-6 reveal">
+          <div class="topic-card">
+            <div class="topic-icon c-red">🔒</div>
+            <div class="topic-tag c-red">Cybersecurity</div>
+            <h4>Network Security</h4>
+            <p>Techniques for securing optical and wireless networks — from intrusion detection to quantum key distribution.</p>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="detail-card">
-            <div class="tag">AI/ML</div>
-            <h4>Edge Intelligence</h4>
-            <p>Running inference models directly on IoT devices reduces latency and cloud dependency, enabling real-time decisions in smart homes, robotics, and wearables.</p>
+
+        <div class="col-md-4 col-sm-6 reveal">
+          <div class="topic-card">
+            <div class="topic-icon c-pink">🧬</div>
+            <div class="topic-tag c-pink">Biotech</div>
+            <h4>AI in Healthcare</h4>
+            <p>Applying deep learning to medical imaging, diagnostics, and drug discovery to accelerate patient outcomes.</p>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="detail-card">
-            <div class="tag green">IoT</div>
-            <h4>Smart Sensor Networks</h4>
-            <p>Distributed sensor meshes using MQTT and LoRaWAN allow city-scale environmental monitoring, predictive maintenance, and precision agriculture at low cost.</p>
+
+        <div class="col-md-4 col-sm-6 reveal">
+          <div class="topic-card">
+            <div class="topic-icon c-lime">🌱</div>
+            <div class="topic-tag c-lime">Green Tech</div>
+            <h4>Sustainable Technology</h4>
+            <p>Energy-efficient hardware design, solar-powered sensor nodes, and green data centre architectures for a sustainable future.</p>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="detail-card">
-            <div class="tag purple">Quantum</div>
-            <h4>Quantum Cryptography</h4>
-            <p>Quantum key distribution (QKD) uses the laws of quantum mechanics to create theoretically unbreakable encryption, revolutionizing secure communications.</p>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="detail-card">
-            <div class="tag teal">Blockchain</div>
-            <h4>Smart Contracts &amp; DeFi</h4>
-            <p>Self-executing contracts on decentralized networks eliminate the need for intermediaries in finance, supply chains, and digital ownership systems.</p>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
 
   <footer>© 2026 <span>InnovateEX</span> — Built with curiosity &amp; code.</footer>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="shared.js"></script>
 </body>
 </html>

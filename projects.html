@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects – InnovateEX</title>
+  <meta name="description" content="Student projects at InnovateEX across 10 technology domains — 2026 cohort.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="shared.css" rel="stylesheet">
@@ -12,58 +13,72 @@
       background: #0d0d0d;
       border: 1px solid #1a1a1a;
       border-radius: 10px;
-      padding: 1.5rem 1.6rem;
+      padding: 1.75rem;
+      height: 100%;
       display: flex;
-      align-items: flex-start;
-      gap: 1.1rem;
-      transition: all 0.2s;
-      margin-bottom: 0.75rem;
+      flex-direction: column;
+      transition: border-color 0.2s, background 0.2s, transform 0.2s;
     }
     .project-card:hover {
       border-color: rgba(249,115,22,0.3);
       background: rgba(249,115,22,0.04);
-      transform: translateX(5px);
+      transform: translateY(-4px);
     }
-    .proj-num {
-      width: 36px; height: 36px;
+    .topic-icon {
+      width: 44px; height: 44px;
       border-radius: 8px;
-      background: #111;
-      border: 1px solid #222;
       display: flex; align-items: center; justify-content: center;
-      font-weight: 800;
-      font-size: 0.75rem;
-      color: #555;
+      font-size: 1.3rem;
+      margin-bottom: 1.1rem;
       flex-shrink: 0;
-      font-family: 'Syne', sans-serif;
     }
-    .proj-info h5 { color: #fff; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.3rem; }
-    .proj-info p  { color: #555; font-size: 0.82rem; margin: 0; line-height: 1.55; }
-    .proj-badge {
+    .topic-tag {
       display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 700;
-      padding: 0.15rem 0.6rem;
-      border-radius: 4px;
-      letter-spacing: 0.5px;
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 1.2px; text-transform: uppercase;
+      padding: 0.2rem 0.65rem; border-radius: 4px;
+      margin-bottom: 0.9rem;
+    }
+    .project-card h4 { color: #fff; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.5rem; }
+    .project-card p  { color: #666; font-size: 0.86rem; line-height: 1.65; margin: 0; flex: 1; }
+
+    /* colour variants — identical to innovations.html */
+    .c-blue   { background: rgba(59,130,246,0.12);  color: #60a5fa; }
+    .c-orange { background: rgba(249,115,22,0.12);  color: #f97316; }
+    .c-yellow { background: rgba(234,179,8,0.12);   color: #facc15; }
+    .c-green  { background: rgba(34,197,94,0.12);   color: #4ade80; }
+    .c-purple { background: rgba(168,85,247,0.12);  color: #c084fc; }
+    .c-teal   { background: rgba(20,184,166,0.12);  color: #2dd4bf; }
+    .c-red    { background: rgba(239,68,68,0.12);   color: #f87171; }
+    .c-pink   { background: rgba(236,72,153,0.12);  color: #f472b6; }
+    .c-sky    { background: rgba(14,165,233,0.12);  color: #38bdf8; }
+    .c-lime   { background: rgba(132,204,22,0.12);  color: #a3e635; }
+
+    /* project link at bottom */
+    .proj-link {
+      display: inline-flex; align-items: center; gap: 4px;
+      margin-top: 0.85rem; color: #444; font-size: 0.78rem;
+      font-weight: 600; text-decoration: none; transition: color 0.15s;
+    }
+    .proj-link:hover { color: #f97316; }
+
+    /* coming soon badge */
+    .coming-soon {
+      display: inline-flex; align-items: center; gap: 4px;
+      margin-top: 0.85rem;
+      font-size: 0.72rem; font-weight: 700;
+      color: #333; letter-spacing: 0.5px;
       text-transform: uppercase;
     }
-    .badge-photon { background: rgba(59,130,246,0.12);  color: #60a5fa; }
-    .badge-lifi   { background: rgba(234,179,8,0.12);   color: #facc15; }
-    .badge-iot    { background: rgba(34,197,94,0.12);   color: #4ade80; }
-    .badge-wdm    { background: rgba(249,115,22,0.12);  color: #f97316; }
 
+    /* sidebar */
     .sidebar-box {
-      background: #0d0d0d;
-      border: 1px solid #1a1a1a;
-      border-radius: 10px;
-      padding: 1.6rem;
+      background: #0d0d0d; border: 1px solid #1a1a1a;
+      border-radius: 10px; padding: 1.6rem;
     }
     .sidebar-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.65rem 0;
-      border-bottom: 1px solid #111;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0.65rem 0; border-bottom: 1px solid #111;
     }
     .sidebar-row:last-of-type { border-bottom: none; }
     .sidebar-row span:first-child { color: #555; font-size: 0.82rem; }
@@ -72,7 +87,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg" id="mainNav">
     <div class="container">
       <a class="navbar-brand" href="index.html">InnovateEX</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -93,7 +108,7 @@
     <div class="container position-relative" style="z-index:1;">
       <div class="page-hero-tag">Student Work</div>
       <h1>Student Projects</h1>
-      <p>Real-world experiments and live demos built by our students exploring optical comms, AI, and IoT.</p>
+      <p>Real-world experiments and demos across all 10 innovation domains, built by the 2026 cohort.</p>
     </div>
   </div>
 
@@ -101,51 +116,129 @@
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-8">
+          <div class="row g-3">
 
-          <div class="project-card">
-            <div class="proj-num">01</div>
-            <div class="proj-info">
-              <h5>Propagation Loss Analysis in Optical Fiber</h5>
-              <p>Measuring attenuation over distance using OTDR and comparing single-mode vs multimode fibres.</p>
-              <div class="mt-2"><span class="proj-badge badge-photon">Photonics</span></div>
+            <!-- 1. Optical Networks -->
+            <div class="col-sm-6 reveal">
+              <div class="project-card">
+                <div class="topic-icon c-blue">🌐</div>
+                <div class="topic-tag c-blue">Optical Networks</div>
+                <h4>Propagation Loss Analysis in Optical Fiber</h4>
+                <p>Measuring attenuation over distance using OTDR and comparing single-mode vs multimode fibres.</p>
+                <a href="https://github.com/YOUR_USERNAME/optical-fiber-analysis" target="_blank" rel="noopener" class="proj-link">🐙 GitHub ↗</a>
+              </div>
             </div>
-          </div>
 
-          <div class="project-card">
-            <div class="proj-num">02</div>
-            <div class="proj-info">
-              <h5>WDM Multiplexing &amp; BER Measurement</h5>
-              <p>Implementing Wavelength Division Multiplexing in the lab and measuring Bit Error Rate under varying signal conditions.</p>
-              <div class="mt-2"><span class="proj-badge badge-wdm">WDM</span></div>
+            <!-- 2. AI / ML -->
+            <div class="col-sm-6 reveal">
+              <div class="project-card">
+                <div class="topic-icon c-orange">🤖</div>
+                <div class="topic-tag c-orange">AI / ML</div>
+                <h4>WDM Multiplexing &amp; BER Measurement</h4>
+                <p>Implementing Wavelength Division Multiplexing and measuring Bit Error Rate under varying signal conditions.</p>
+                <a href="https://github.com/YOUR_USERNAME/wdm-ber-lab" target="_blank" rel="noopener" class="proj-link">🐙 GitHub ↗</a>
+              </div>
             </div>
-          </div>
 
-          <div class="project-card">
-            <div class="proj-num">03</div>
-            <div class="proj-info">
-              <h5>Li-Fi Data Transmission Demo</h5>
-              <p>Live demonstration of audio and data transmission over a modulated LED beam with a photodetector receiver.</p>
-              <div class="mt-2"><span class="proj-badge badge-lifi">Li-Fi</span></div>
+            <!-- 3. Li-Fi -->
+            <div class="col-sm-6 reveal">
+              <div class="project-card">
+                <div class="topic-icon c-yellow">💡</div>
+                <div class="topic-tag c-yellow">Li-Fi</div>
+                <h4>Li-Fi Data Transmission Demo</h4>
+                <p>Live demonstration of audio and data transmission over a modulated LED beam with a photodetector receiver.</p>
+                <a href="https://github.com/YOUR_USERNAME/lifi-demo" target="_blank" rel="noopener" class="proj-link">🐙 GitHub ↗</a>
+              </div>
             </div>
-          </div>
 
-          <div class="project-card">
-            <div class="proj-num">04</div>
-            <div class="proj-info">
-              <h5>Smart IoT Home Automation</h5>
-              <p>ESP32-based sensor network with MQTT broker for real-time control of lighting, temperature, and security alerts.</p>
-              <div class="mt-2"><span class="proj-badge badge-iot">IoT</span></div>
+            <!-- 4. IoT -->
+            <div class="col-sm-6 reveal">
+              <div class="project-card">
+                <div class="topic-icon c-green">🏠</div>
+                <div class="topic-tag c-green">IoT</div>
+                <h4>Smart IoT Home Automation</h4>
+                <p>ESP32-based sensor network with MQTT broker for real-time control of lighting, temperature, and security alerts.</p>
+                <a href="https://github.com/YOUR_USERNAME/iot-home-automation" target="_blank" rel="noopener" class="proj-link">🐙 GitHub ↗</a>
+              </div>
             </div>
-          </div>
 
+            <!-- 5. Quantum -->
+            <div class="col-sm-6 reveal">
+              <div class="project-card">
+                <div class="topic-icon c-purple">⚛️</div>
+                <div class="topic-tag c-purple">Quantum</div>
+                <h4>Quantum Computing</h4>
+                <p>Harnessing quantum mechanics to solve problems beyond classical computers — from cryptography to drug discovery.</p>
+                <span class="coming-soon">⏳ Coming Soon</span>
+              </div>
+            </div>
+
+            <!-- 6. Blockchain -->
+            <div class="col-sm-6 reveal">
+              <div class="project-card">
+                <div class="topic-icon c-teal">🔗</div>
+                <div class="topic-tag c-teal">Blockchain</div>
+                <h4>Blockchain & DeFi</h4>
+                <p>Decentralized ledger technology enabling secure, transparent transactions and self-executing smart contracts.</p>
+                <span class="coming-soon">⏳ Coming Soon</span>
+              </div>
+            </div>
+
+            <!-- 7. Cloud -->
+            <div class="col-sm-6 reveal">
+              <div class="project-card">
+                <div class="topic-icon c-sky">☁️</div>
+                <div class="topic-tag c-sky">Cloud</div>
+                <h4>Edge & Cloud Computing</h4>
+                <p>Running inference and processing at the network edge to reduce latency and cloud dependency in real-time systems.</p>
+                <span class="coming-soon">⏳ Coming Soon</span>
+              </div>
+            </div>
+
+            <!-- 8. Cybersecurity -->
+            <div class="col-sm-6 reveal">
+              <div class="project-card">
+                <div class="topic-icon c-red">🔒</div>
+                <div class="topic-tag c-red">Cybersecurity</div>
+                <h4>Network Security</h4>
+                <p>Techniques for securing optical and wireless networks — from intrusion detection to quantum key distribution.</p>
+                <span class="coming-soon">⏳ Coming Soon</span>
+              </div>
+            </div>
+
+            <!-- 9. Biotech -->
+            <div class="col-sm-6 reveal">
+              <div class="project-card">
+                <div class="topic-icon c-pink">🧬</div>
+                <div class="topic-tag c-pink">Biotech</div>
+                <h4>AI in Healthcare</h4>
+                <p>Applying deep learning to medical imaging, diagnostics, and drug discovery to accelerate patient outcomes.</p>
+                <span class="coming-soon">⏳ Coming Soon</span>
+              </div>
+            </div>
+
+            <!-- 10. Green Tech -->
+            <div class="col-sm-6 reveal">
+              <div class="project-card">
+                <div class="topic-icon c-lime">🌱</div>
+                <div class="topic-tag c-lime">Green Tech</div>
+                <h4>Sustainable Technology</h4>
+                <p>Energy-efficient hardware design, solar-powered sensor nodes, and green data centre architectures.</p>
+                <span class="coming-soon">⏳ Coming Soon</span>
+              </div>
+            </div>
+
+          </div>
         </div>
 
-        <div class="col-lg-4">
+        <!-- Sidebar -->
+        <div class="col-lg-4 reveal">
           <div class="sidebar-box">
             <div class="section-tag mb-2">Summary</div>
             <h5 style="color:#fff; font-weight:700; font-family:'Syne',sans-serif; margin-bottom:1.25rem; font-size:1.05rem;">Project Stats</h5>
-            <div class="sidebar-row"><span>Total Projects</span><span>4</span></div>
-            <div class="sidebar-row"><span>Tech Domains</span><span>3</span></div>
+            <div class="sidebar-row"><span>Total Projects</span><span>10</span></div>
+            <div class="sidebar-row"><span>Active</span><span>4</span></div>
+            <div class="sidebar-row"><span>Coming Soon</span><span>6</span></div>
             <div class="sidebar-row"><span>Cohort Year</span><span>2026</span></div>
             <div style="margin-top:1.5rem;">
               <a href="contact.html" class="btn-primary-grad" style="display:block; text-align:center; font-size:0.85rem; padding:0.7rem 1rem;">
@@ -153,13 +246,23 @@
               </a>
             </div>
           </div>
+
+          <div class="sidebar-box mt-3" style="text-align:center;">
+            <div class="section-tag mb-2">Source Code</div>
+            <p style="color:#555; font-size:0.82rem; margin-bottom:1rem;">All active projects are open source and on GitHub.</p>
+            <a href="https://github.com/YOUR_GITHUB_ORG" target="_blank" rel="noopener"
+               class="btn-primary-grad" style="font-size:0.82rem; padding:0.6rem 1.2rem;">
+              🐙 View on GitHub →
+            </a>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
   <footer>© 2026 <span>InnovateEX</span> — Built with curiosity &amp; code.</footer>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="shared.js"></script>
 </body>
 </html>
