@@ -1,7 +1,9 @@
+.container { width: 100%; max-width: 900px; }
 .logo {
-  font-style: italic;
-  font-size: 40px;
-  padding-left: 20px;
+  font-style: italic bold;
+  font-size: 60px;
+  padding-left: 800px;
+  color: red;
 }
 .nav-links {
   display: flex;
@@ -16,11 +18,17 @@
   color: #333;
   font-weight: 500;
 }
+header {
+  width: 100%;
+}
+
 header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 main {
   padding: 2rem;
@@ -47,4 +55,9 @@ form button {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+}
+hr {
+  border: none;
+  border-top: 1px solid black;
+  margin: 20px ;
 }
