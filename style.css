@@ -1,0 +1,50 @@
+.logo {
+  font-style: italic;
+  font-size: 40px;
+  padding-left: 20px;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+main {
+  padding: 2rem;
+}
+
+main h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+form input,
+form textarea {
+  width: 300px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+form button {
+  padding: 8px 24px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
