@@ -7,20 +7,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <nav>
+
             <div class="logo">InnovateEX</div>
-            <div class="nav-links">
-               <a href="index.html">Home</a>
-               <a href="about.html">About</a>
-               <a href="contact.html">Contact</a>
+
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
             </div>
+
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
         </nav>
     </header>
-    <hr>
+
     <main>
         <h1>Welcome to InnovateEX</h1>
-        <p></p>  
     </main>
+
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.onclick = function () {
+            navLinks.classList.toggle("active");
+        };
+    </script>
+
 </body>
 </html>
