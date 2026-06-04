@@ -117,8 +117,43 @@ main h1 {
     font-size: 30px;
     text-align: center;
   }
-  .menu-toggle {
-    display: block;
 }
 
+/* CENTER THE CONTACT FORM */
+
+main form {
+  max-width: 500px;
+  margin: 0 auto;  /* This centers the form horizontally */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+main form input,
+main form textarea,
+main form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+main form button {
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+main form button:hover {
+  background-color: #cc0000;
+}
+
+/* Remove the <br> spacing since we're using gap */
+main form input,
+main form textarea,
+main form button {
+  margin-bottom: 0;
 }
