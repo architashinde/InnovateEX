@@ -157,3 +157,7 @@ main form textarea,
 main form button {
   margin-bottom: 0;
 }
+
+.content{
+  text-align: center;
+}
