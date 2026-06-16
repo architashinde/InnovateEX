@@ -261,3 +261,20 @@ footer{
 .footer-links a:hover{
     color: #0d6efd;
 }
+.tech-card p,
+.tech-card ul {
+  margin: 0 0 16px 0;
+  line-height: 1.6;
+}
+
+.tech-card h3 {
+  margin: 16px 0 8px;
+}
+
+.qa-item {
+  margin-bottom: 18px;
+}
+
+.tech-card ul {
+  padding-left: 20px;
+}
