@@ -31,7 +31,7 @@ InnovateEX/
 
 ## Live Demo
 
-https://architashinde.github.io/InnovateEX/
+[https://architashinde.github.io/InnovateEX/](https://architashinde.github.io/InnovateEX/)
 
 ## Running Locally
 

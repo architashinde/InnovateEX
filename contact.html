@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact – InnovateEX</title>
+  <meta name="description" content="Get in touch with InnovateEX — reach out with questions, feedback, or collaboration ideas.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,22 +25,27 @@
   </header>
 
   <main>
-    <h1>Contact Us</h1>
-    <form>
+   <h1>Contact Us</h1>
+    <form id="contact-form">
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
       <textarea placeholder="Your Message" rows="5" required></textarea>
       <button type="submit">Send</button>
     </form>
+    <p id="form-status"></p>
   </main>
-   <script>
-        const menuToggle = document.getElementById("menu-toggle");
-        const navLinks = document.getElementById("nav-links");
+  <script src="script.js"></script>
+  <script>
+   const contactForm = document.getElementById("contact-form");
+   const formStatus = document.getElementById("form-status");
 
-        menuToggle.onclick = function () {
-            navLinks.classList.toggle("active");
-        };
-    </script>
+   contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      formStatus.textContent = "Thanks for reaching out! Your message has been noted.";
+      formStatus.style.color = "green";
+      contactForm.reset();
+  });
+</script>
 
     <footer>
      <h3>InnovateEX</h3>
