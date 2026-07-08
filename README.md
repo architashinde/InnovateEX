@@ -41,11 +41,3 @@ InnovateEX/
    ```
 2. Open `index.html` in your browser — no build tools or server required.
 
-## Status
-
-This is an ongoing learning project. Content and design are being refined over time as new technologies emerge and as front-end skills improve.
-
-## Author
-
-**Archita Shinde**
-GitHub: [@architashinde](https://github.com/architashinde)
