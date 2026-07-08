@@ -26,6 +26,7 @@ InnovateEX/
 ├── about.html      → About the project
 ├── contact.html    → Contact form
 ├── style.css       → All styling
+├── script.js       → Shared JavaScript (menu toggle + carousel logic)
 └── images/         → Carousel images for each card
 ```
 
@@ -41,3 +42,16 @@ InnovateEX/
    ```
 2. Open `index.html` in your browser - no build tools or server required.
 
+## Preview
+
+![InnovateEX homepage - desktop view](images/screenshot-desktop.png)
+
+*Desktop view showing the technology cards and image carousels.*
+
+![InnovateEX homepage - more cards](images/screenshot-desktop-2.png)
+
+*Scrolled view showing additional technology cards.*
+
+![InnovateEX mobile navigation](images/screenshot-mobile.png)
+
+*Mobile view with the collapsible navigation menu open.*
