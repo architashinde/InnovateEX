@@ -24,7 +24,7 @@ This project started as a personal effort to make sense of the sheer number of n
 InnovateEX/
 ├── index.html      → Home page with all technology cards
 ├── about.html      → About the project
-├── contact.html     → Contact form
+├── contact.html    → Contact form
 ├── style.css       → All styling
 └── images/         → Carousel images for each card
 ```
